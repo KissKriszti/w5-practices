@@ -1,110 +1,105 @@
-/* console.log("Hello!");
-console.log('Hello!');
-console.log(`Hello!`); */
+
+/* let myString = "mikkamakka";
+
+let mySecondString = myString
+
+let myThirdString = "mikkamakka"
+
+console.log(myString);
+console.log(mySecondString);
+console.log(myString === mySecondString);
+console.log(myString === myThirdString); */
 
 
-/* console.log(typeof 2);
-console.log(typeof NaN);
-console.log(0 / 0);
-console.log(2.14);
-console.log(true);
-console.log(false);
-console.log(undefined);
-console.log(null);
-console.log(typeof undefined);
-console.log(typeof null); */
+/* let myObject = {
+    myString: "mikkamakka"
+}
+
+let mySecondObject = myObject;
+
+let myThirdObject = {
+    myString: "mikkamakka"
+} */
+
+/* console.log(myObject === mySecondObject);
+console.log(myObject === myThirdObject); */
 
 
-/* console.log({
-    "title": "Start Coding",
-    "type": "Solo",
-    "difficulty": 4.1,
-    "usefulness": 4.2,
-    "materials": 3.4,
-    "enjoyability": 3.7,
-    "tasks": [
-        {
-            "title": "Bank Accounts",
-            "description": ""
-        },
-        {
-            "title": "100 doors",
-            "description":""
-        },
-        {
-            "title": "Word filter",
-            "description": ""
-        }
-    ]
+/* console.log("" === "");
+console.log({} === {}); */
+
+/* mySecondObject.myString = "domdodom";
+console.log(myObject.myString);
+
+let myFourthObject = {...myObject};
+
+myFourthObject.myString = "vacskamati";
+console.log(myFourthObject.myString); */
+
+
+/* window.addEventListener("load", function() {
+    console.log("The page has loaded")
 }) */
 
+function loadEvent() {
 
-/* var a = "Hello1"
-let b = "Hello2"
-const c = "Hello3"
+    console.log("The page has loaded")
 
-console.log(a);
-console.log(b);
-console.log(c); */
+    let rootElement = document.getElementById("root")
 
+  /*   let card = function (movieReceive){
 
-/* function d() {
-    
-    if (1+1===2) {
-        
+        return `
+        <div class="card">
+            <h2>${movieReceive.title}</h2>
+            <div class="time">Year: ${movieReceive.year}</div>
+            <div clas="rate">Rate: ${movieReceive.rate}</div>
+        </div>
+        `
+    }; */
+
+    let card2 = function (title,year,rate){
+
+        return `
+        <div class="card">
+            <h2>${title}</h2>
+            <div class="time">Year: ${year}</div>
+            <div clas="rate">Rate: ${rate}</div>
+        </div>
+        `
+    };
+
+   /*  rootElement.insertAdjacentHTML("beforeend", card({
+        "title": "Harry Potter",
+        "year": 2017,
+        "rate": 9.9
+    }));
+
+    let actuallyFavouriteMovie = {
+        "title": " Eternal sunshine",
+        "year": 2004,
+        "rate": 9.8
     }
-    
-    var a = "Hello1"
-    let b = "Hello2"
-    const c = "Hello3"
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
 
-d() */
+    rootElement.insertAdjacentHTML("beforeend", card(actuallyFavouriteMovie));
+    rootElement.insertAdjacentHTML("beforeend", card(movies[0])); */
 
-/* let e = 1
-console.log(e);
-e = 2 
-console.log(e);
-e = e * 2
-console.log(e); */
+   /*  for (const movieSend of movies) {
+        rootElement.insertAdjacentHTML("beforeend", card(movieSend));
+    } */
 
-/* function multiplyByTwo(num) {
-    console.log(num);
-    return num * 2
-}
-
-let f = multiplyByTwo(1)
-console.log(f);
-console.log(multiplyByTwo(1)); */
-
-/* let g = {
-    myMethod: function () {
-        console.log("Hello");
+    let anotherFavoriteMovie = {
+        "title": "The Last Scout Boy",
+        "year": 1991,
+        "rate": 7.0
     }
-}
 
-g.myMethod()
+    rootElement.insertAdjacentHTML("beforeend", card2(anotherFavoriteMovie.title, anotherFavoriteMovie.year, anotherFavoriteMovie.rate));
 
-let window = {
-    addEventListener: function (eventName, eventFunction) {
-        if (eventName === "load") {
-            eventFunction()
-        }
+    for (const movieSend of movies) {
+        rootElement.insertAdjacentHTML("beforeend", card2(movieSend.title, movieSend.year, movieSend.rate));
     }
-}
 
-window.addEventListener("load", loadEvent) */
+};
 
-
-let h = {
-    anotherMethod: function (text) {
-        return `You sent the following argument to this method: ${text}`
-    }
-}
-
-let i = h.anotherMethod("Hello")
-console.log(i)
-console.log(h.anotherMethod("Welcome"))
+window.addEventListener("load", loadEvent);

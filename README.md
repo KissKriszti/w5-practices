@@ -7,3 +7,7 @@ You can use this repository as a template for your repository or copy the files 
 3. If you don't need it stop it with `Control + C` keycommand.
 
 You can write your frontend code (`HTML, CSS, JS`) into the `frontend` directory.
+
+1.feladat
+
+kibővíteni a kódot hogy kerüljön bele az év és értékelés a div kártyán belül. 3 oszlopos flex kártya formázás.
